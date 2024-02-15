@@ -55,13 +55,13 @@ def get_fruityvice_data(this_fruit_choice):
  #create the repeatable code block called a function
     
 try:
-fruit_choice = streamlit.text_input('What fruit would you like information about?','KIWI')
+fruit_choice = streamlit.text_input('What fruit would you like information about?')
 #streamlit.write('The user entered', fruit_choice)
 if not fruit_choice:
   streamlit.error("Please select fruit to get information")
 else:
 
-back_from_function= get_fruityvice_data(fruit-choice)  
+back_from_function= get_fruityvice_data(fruit_choice)  
 streamlit.dataframe(back_from_function)
 #fruityvice_response=requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
